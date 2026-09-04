@@ -1,4 +1,95 @@
-body {
-  background:black;
-  color:white;
-}
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    background: #f4f6f8;
+    color: #1f2933;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  header {
+    padding: 2rem;
+    background: #243b53;
+    color: white;
+    text-align: center;
+  }
+
+  main {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  section {
+    flex: 1;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+  }
+
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+  }
+
+  input,
+  select,
+  button {
+    padding: 0.7rem;
+    font: inherit;
+  }
+
+  button {
+    border: 0;
+    border-radius: 4px;
+    background: #43bb9f;
+    color: white;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: #43bb9f;
+  }
+
+  .delete-button {
+    background: #ac1908;
+  }
+
+  #form-message {
+    min-height: 1.25rem;
+    color: #43bb9f;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th,
+  td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #d9e2ec;
+    text-align: left;
+  }
+
+  .table-container {
+    overflow-x: auto;
+  }
+
+  @media (max-width: 750px) {
+    main {
+      flex-direction: column;
+    }
+
+    section {
+      width: 100%;
+    }
+  }

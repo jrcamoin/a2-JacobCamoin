@@ -1,8 +1,8 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
-  "author": "",
+  "name": "a2-jacobcamoin",
+  "version": "1.0.0",
+  "description": "A todo task application",
+  "author": "Jacob Camoin",
   "scripts": {
     "start": "node server.js"
   },

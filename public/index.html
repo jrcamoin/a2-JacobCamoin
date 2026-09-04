@@ -1,18 +1,72 @@
 <!doctype html>
 <html lang='en'>
   <head>
-    <title>CS4241 Assignment 2</title>
+    
     <meta charset='utf-8' />
-    <script src='js/main.js'></script>
-    <link rel='stylesheet' href='css/main.css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <!-- get rid of favicon error -->
+    <link rel='stylesheet' href='css/main.css' />
     <link rel='icon' href='data:;base64,iVBORw0KGgo=' />
+
+    <script src="js/main.js"></script>
+    <title>Todo List</title>
+
   </head>
   <body>
-    <form>
-      <input type='text' id='yourname' value='your name here'>
-      <button>submit</button>
-    </form>
+    <header>
+      <h1>Todo List</h1>
+      <p>Add tasks and organize them by priority.</p>
+    </header>
+
+    <main>
+      <section aria-labelledby="form-heading">
+        <h2 id="form-heading">Add a todo</h2>
+        <form id="todo-form">
+          <div class="form-field">
+            <label for="task">Task</label>
+            <input id="task" name="task" type="text" required>
+          </div>
+          <div class="form-field">
+            <label for="priority">Priority</label>
+            <select id="priority" name="priority" required>
+              <option value="">Choose a priority</option>
+              <option value="high">High</option>
+              <option value="medium">Medium</option>
+              <option value="low">Low</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="creation-date">Creation date</label>
+            <input id="creation-date" name="creationDate" type="date" required>
+          </div>
+
+          <button type="submit">Add todo</button>
+        </form>
+
+        <p id="form-message" aria-live="polite"></p>
+      
+      </section>
+
+      <section aria-labelledby="results-heading">
+        <h2 id="results-heading">Current todos</h2>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Task</th>
+                <th scope="col">Priority</th>
+                <th scope="col">Created</th>
+                <th scope="col">Deadline</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="todo-results"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
